@@ -1,0 +1,213 @@
+/* Mobile First Design */
+*{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+	background: url("../img/bsqueezed_bg_dark.jpg");
+	max-height: 250px;
+	overflow:hidden;
+	font-size: 1.4rem;
+	color:white;
+
+}
+
+/* added to give space at the top of the form shape*/
+form:first-child{
+	padding-top: 50px;
+}
+
+form {
+  filter: drop-shadow(0px 10px 10px #606060);
+  background-color: #B0D136;
+  margin: -10px auto;
+  padding: 20px;
+  width: 90vw;
+  position: relative;
+}
+
+/* top triangle for form shape*/
+form::before {
+  content: '';
+	width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent; 
+  border-right: 20px solid transparent; 
+  border-bottom: 20px solid #B0D136;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -20px;
+}
+
+/*bottom triangle for form shape*/
+form::after {
+  content: '';
+	width: 0; 
+  height: 0;
+  border-left: 45vw solid transparent; 
+  border-right: 45vw solid transparent; 
+  border-top: 140px solid #B0D136;
+  position: absolute;
+  bottom: -140px;
+  left: 0;
+}
+
+/*set flex width and give logo space at top to match psd*/
+.logo{
+	flex: 1;
+	padding-top: 20px;
+}
+
+/*set flex width and center*/
+.header-copy{
+	flex: 2;
+	margin: auto auto;
+}
+
+/*set flex width and center text*/
+.header-copy p{
+	text-align: left;
+
+	padding: 20px 5% 0 5%;
+
+}
+
+/*set spacing to match psd*/
+.body-copy{
+	padding: 30px 20px 30px 0;
+	flex: 1;
+}
+
+
+ul {
+  list-style: none;
+}
+
+/* color list bullets */
+li::before {
+  content: "• ";
+  color: #6F1B77; 
+}
+
+/* set flex width*/
+.form{
+	flex: 1;
+}
+
+/* space at beginning of form feilds to match psd*/
+.input{
+	padding-left: 20px;
+}
+
+/* rounded input feild and space between feilds*/
+.form-control{
+	border-radius: 20px;
+	margin-bottom: 15px;
+}
+
+/* enlarge message feild*/
+.message{
+	height: 150px;
+}
+
+
+.button{
+	text-align: center;
+}
+
+/* form button*/
+.btn-primary{
+	border: 2px solid white;
+	border-radius: 10px;
+	background-color: #6F1B77;
+	color: #C2C2C2;
+
+}
+/* give spacing to bee and center*/
+.bee{
+	margin-top: 125px;
+	text-align: center;
+}
+/*forward button*/
+.btn-secondary{
+	background-color: #E5E5E5;
+	color: #6F1B77;
+	box-shadow: 0 0 1px 1px #909090;
+	margin-bottom: 50px;
+}
+
+.footer-copy{
+	text-align: center;
+
+}
+
+.em{
+	color:#B0D136;
+}
+
+.purple-text{
+	color:#6F1B77;
+	font-weight: bold;
+}
+.light-green-text{
+	color: #B0D136;
+}
+
+/* change header text and form size responsively
+   also sets form next to body copy for screens larger than 768px*/
+@media (min-width: 576px){
+		header {
+			font-size: 1.6rem;
+		}
+		form{
+			width: 60vw;
+		}
+		form::after {
+			border-left: 30vw solid transparent; 
+  			border-right: 30vw solid transparent; 
+  		}
+}
+
+@media (min-width: 768px) { 
+		header {
+			font-size: 1.8rem;
+		}
+		form{
+			width: 35vw;
+		}
+		form::after {
+			border-left: 17.5vw solid transparent; 
+  			border-right: 17.5vw solid transparent; 
+  		}
+  		.content{
+  			display: flex;
+  		}
+  		.bee{
+  			float: right;
+  			padding-right: 20%;
+	
+		}
+
+}
+
+@media (min-width: 992px) { 
+		
+		header {
+			font-size: 2.25rem;
+		}
+
+}
+@media (min-width: 1200px) { 
+		header {
+			font-size: 2.5rem;
+		}
+		form{
+			width: 30vw;
+		}
+		form::after {
+			border-left: 15vw solid transparent; 
+  			border-right: 15vw solid transparent;
+  		}
+}
+
